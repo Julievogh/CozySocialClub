@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Kapakana";
+  src: url("fonts/Kapakana[wght].ttf") format("truetype"); /* Specify the path to your font file */
+  /* You can also include other font formats here for better compatibility */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2e8dc;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.csc_logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.frontpage_imgs_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  height: 400px; /* Set a fixed height for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box-shadow for a subtle shadow effect */
+}
+
+.img1 {
+  display: block; /* Ensure the image is displayed as a block element */
+  width: 100%; /* Make images fill the grid cell */
+  height: 200px; /* Set a fixed height to create a square aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: height 2.3s ease, max-width 0.3s ease; /* Add transition for smooth changes */
+  margin: 0; /* Remove default margin */
+}
+
+/* Add this CSS to create the hover effect */
+.img1 {
+  transition: filter 0.3s ease; /* Add transition for smooth effect */
+}
+
+.img1:hover {
+  filter: grayscale(0%) brightness(100%) sepia(50%) hue-rotate(0deg) saturate(100%) contrast(100%) opacity(50%);
+  background-color: rgba(255, 0, 0, 0.5); /* Apply a red overlay */
+}
+
+.follow_us_container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 10px; /* Add some gap between columns */
+  justify-content: space-around; /* Center the content horizontally */
+  align-items: center;
+  text-align: left;
+}
+
+.icons_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 10px; /* Add some gap between columns */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.facebook_icon img,
+.instagram_icon img {
+  margin: 10px 30px;
+  width: 60px; /* Adjust the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+  transform: 0.3s;
+  transition: filter 0.3s ease; /* Add transition for smooth effect */
+}
+
+.facebook_icon img:hover,
+.instagram_icon img:hover {
+  filter: grayscale(0%) brightness(80%) sepia(20%) hue-rotate(0deg) saturate(100%) contrast(100%) opacity(60%);
+  background-color: rgba(255, 0, 0, 0.1); /* Apply a red overlay */
+  border-radius: 40px;
+}
+
+.red_line_container {
+  display: flex;
+  justify-content: center; /* Center the line horizontally */
+}
+
+.line {
+  width: 100%; /* Adjust the width of the line */
+  height: 2px; /* Adjust the height of the line */
+  background-color: red; /* Set the background color to red */
+  margin: 25px;
+}
+
+.info_box {
+  grid-column: 2 / 3; /* Span the first column */
+  color: #9c856f;
+}
+
+.info_box p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.info_box h5 {
+  font-family: Kapakana;
+  font-size: 1.6rem;
+  color: #9c856f;
+}
+
+.contact_box {
+  color: #9c856f;
+  font-family: Kapakana;
+  font-size: 1.4rem;
+  grid-column: 3 / 4; /* Span the second column */
+
+  justify-self: end;
+}
+
+.logo_box {
+  color: #9c856f;
+  font-family: Kapakana;
+  grid-column: 1 / -1; /* Span both columns */
+  justify-self: center; /* Center horizontally */
+}
+
+.logo_box img {
+  width: 100px; /* Adjust the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 768px) {
+  .frontpage_imgs_container {
+    height: auto; /* Remove fixed height for larger screens */
+    max-width: 800px; /* Set a maximum width for the container */
+  }
+
+  .img1 {
+    height: auto; /* Allow the height to adjust */
+    max-width: 100%; /* Make images responsive within the grid cell */
+  }
+}
