@@ -65,7 +65,10 @@ body {
 }
 
 .follow_us_txt {
+  margin-top: 1.4rem;
+  font-size: 3rem;
   font-family: Kapakana;
+  color: #9c856f;
 }
 
 .footer_container {
